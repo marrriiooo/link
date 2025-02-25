@@ -32,16 +32,28 @@ section main {
   align-items: center;
 }
 
-section main img {
+.gambar {
   width: 100px;
   border-radius: 50%;
   aspect-ratio: 1;
   box-shadow: 0 0 5px 1px purple;
 }
-section main h2 {
-  font-weight: 600;
+
+.nama {
+  font-size: 80px;
+  font-weight: 1000;
   color: aliceblue;
   text-shadow: 0 0 1px transparent, 0 1px 2px rgba(0, 0, 0.8);
+}
+
+.nama span {
+  display: inline-block;
+  transition: 0.3s;
+  cursor: pointer;
+  letter-spacing: 25px; /* Atur jarak antar huruf */
+}
+.nama span:hover {
+  transform: scale(2) translateY(-20px);
 }
 
 section main a {
@@ -49,9 +61,10 @@ section main a {
   width: 100%;
   align-items: center;
   justify-content: center;
-  border: 1.5px solid white;
+  border: 3px solid black;
+  background-color: purple;
   padding: 10px;
-  color: aliceblue;
+  color: greenyellow;
   text-decoration: none;
   border-radius: 5px;
   gap: 20px;
@@ -59,8 +72,8 @@ section main a {
 }
 
 section main a:hover {
-  background-color: rgb(29, 32, 36);
-  color: white;
+  background-color: greenyellow;
+  color: purple;
 }
 
 section main a i {
@@ -74,7 +87,7 @@ section footer p {
   text-shadow: 0 0 1px transparent, 0 1px 2px rgba(0, 0, 0.8);
 }
 section footer p a {
-  color: aqua;
+  color: greenyellow;
   font-weight: 600;
   text-decoration: none;
 }
