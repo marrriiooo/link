@@ -5,14 +5,101 @@
 }
 
 body {
+  padding-top: 80px;
   height: 100vh;
   font-family: "Space Grotesk", serif;
   position: relative;
   background-image: url(img/bg.jpg);
   background-size: cover;
   background-position: center;
+  overflow-x: hidden;
 }
 
+/* navbar */
+nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  display: flex;
+
+  justify-content: space-around;
+  height: 50px;
+  color: white;
+  align-items: center;
+}
+
+nav .logo {
+  font-family: "Pacifico", cursive;
+  letter-spacing: 3px;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+  width: 40%;
+  justify-content: space-between;
+}
+
+nav ul li a {
+  display: inline-block;
+  padding: 10px 15px;
+  color: white;
+  text-decoration: none;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+nav ul li a:hover {
+  transform: scale(2.1);
+  /* opsional efek highlight */
+}
+
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  height: 20px;
+
+  justify-content: space-between;
+  position: relative;
+}
+
+.menu-toggle input {
+  position: absolute;
+  width: 42px;
+  height: 28px;
+  opacity: 0;
+  left: -8px;
+  top: -3px;
+  cursor: pointer;
+  z-index: 2;
+}
+.menu-toggle span {
+  display: block;
+  width: 28px;
+  height: 3px;
+  background-color: aliceblue;
+  border-radius: 3px;
+  transition: all 0.5s;
+}
+
+/* humberger menu animasi*/
+.menu-toggle span:nth-child(2) {
+  transform-origin: 0 0;
+}
+.menu-toggle span:nth-child(4) {
+  transform-origin: 0 100%;
+}
+
+.menu-toggle input:checked ~ span:nth-child(2) {
+  transform: rotate(45deg) translate(-1px, -1px);
+}
+.menu-toggle input:checked ~ span:nth-child(4) {
+  transform: rotate(-45deg) translate(-1px, -0);
+}
+.menu-toggle input:checked ~ span:nth-child(3) {
+  transform: scale(0);
+}
+
+/* main */
 section {
   display: grid;
   place-items: center;
@@ -90,4 +177,86 @@ section footer p a {
   color: greenyellow;
   font-weight: 600;
   text-decoration: none;
+}
+
+/* responsif breakpoint */
+
+/* ukuran tablet */
+@media screen and (max-width: 768px) {
+  nav ul {
+    width: 50%;
+  }
+}
+
+/* ukuan mobile */
+@media screen and (max-width: 576px) {
+  nav {
+    justify-content: space-between;
+    padding: 0 25px;
+  }
+  .menu-toggle {
+    display: flex;
+  }
+  nav ul {
+    position: absolute;
+    right: 0;
+    flex-direction: column;
+    background-color: black;
+    top: 0;
+    height: 50vh;
+    align-items: center;
+    justify-content: space-evenly;
+    z-index: -1;
+    background-color: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px); /* efek blur */
+    -webkit-backdrop-filter: blur(10px); /* untuk Safari */
+    width: 100%;
+    transform: translateX(100%);
+    transition: all 1s;
+    opacity: 0;
+    font-weight: bold;
+  }
+
+  nav ul li {
+    width: 90%;
+    height: 20%;
+    display: flex;
+  }
+
+  nav ul li a {
+    display: flex;
+    align-items: center;
+    width: 90%; /* atau 100% kalau mau penuh */
+    text-align: center;
+    justify-content: center;
+    padding: 10px 0;
+    border: 3px solid black;
+    background-color: purple;
+    color: greenyellow;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    margin: 5px 0;
+    transition: 0.3s;
+
+    letter-spacing: 3px;
+    font-size: 1.5em;
+  }
+
+  nav ul li a:hover {
+    background-color: greenyellow;
+    color: purple;
+    transform: scale(1.1);
+    /* opsional efek highlight */
+  }
+
+  main,
+  nav .logo {
+    z-index: -2;
+  }
+
+  nav ul.slide {
+    opacity: 1;
+    transform: translateX(0);
+  }
 }
