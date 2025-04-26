@@ -3,62 +3,234 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Mario linktree</title>
-    <!-- font style  -->
+    <title>Mario Linktree</title>
+
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Pacifico&family=Space+Grotesk:wght@300..700&display=swap"
       rel="stylesheet"
     />
-    <!-- font -->
+
+    <!-- Font Awesome Icons -->
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
-      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+
+    <!-- Custom CSS -->
     <link rel="stylesheet" href="style.css" />
   </head>
+
   <body>
-    <!-- linkinn -->
-    <section>
-      <nav class="navbar">
-        <div class="logo">
-          <h4>Mario Senawati</h4>
+    <div class="container">
+      <!-- Header Section -->
+      <header class="header">
+        <div class="hero">
+          <h2 class="heading">Mario Senawati</h2>
+          <p class="sub-heading">Ulangan 31:6</p>
         </div>
 
-        <ul class="nav-list">
-          <li><a href="">home</a></li>
-          <li><a href="">product</a></li>
-          <li><a href="">service</a></li>
-          <li><a href="">galery</a></li>
-          <li><a href="">about</a></li>
-        </ul>
-
-        <div class="menu-toggle">
-          <input type="checkbox" />
-          <span></span>
-          <span></span>
-          <span></span>
+        <div class="features feature-1">
+          <h4 class="kata">Kegagalan</h4>
+          <p class="item">adalah</p>
         </div>
-      </nav>
 
+        <div class="features feature-2">
+          <p class="item">Awal</p>
+          <h4 class="kata">Kemenangan</h4>
+        </div>
+
+        <!-- Navigation Menu -->
+        <nav class="menu">
+          <div class="menu-toggle">
+            <input type="checkbox" />
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+
+          <div class="brand">
+            <h1>Mario Senawati</h1>
+          </div>
+
+          <ul class="menu-list">
+            <li><a href="#biodata">Biodata</a></li>
+            <li><a href="#organisasi-mario">Organisasi</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#galeri">galeri</a></li>
+          </ul>
+        </nav>
+      </header>
+
+      <!-- Main Content -->
       <main>
-        <img src="img/mario.png" alt="mario" class="gambar" />
-        <h2 class="nama">Mario</h2>
-        <a href="instagram"><i class="fa-brands fa-instagram"></i>Instagram</a>
-        <a href=""><i class="fa-brands fa-tiktok"></i>Tik tok</a>
-        <a href=""><i class="fa-brands fa-youtube"></i>You Tube</a>
-        <a href=""><i class="fa-brands fa-linkedin-in"></i>Link In</a>
-      </main>
-      <footer>
-        <p>di buat oleh ❤️ by <a href="">mario</a></p>
-      </footer>
-    </section>
+        <!-- Informasi dan Sosial Media -->
 
-    <!-- Script dipindah ke sini -->
+        <div id="content">
+          <!-- Biodata Section -->
+          <article id="biodata" class="card">
+            <h2>Biodata</h2>
+            <img src="img/gibli4.png" alt="biodata" class="featured-image" />
+            <p>
+              Perkenalkan, saya Mario (biasa dipanggil Mario atau Rio), 24
+              tahun, tinggal di Kebon Jeruk, Jakarta Barat. Dulu saya gemar
+              bermain game online seperti Mobile Legends dan Tekken 8—dari sana
+              saya belajar pentingnya menetapkan target, pantang menyerah, dan
+              terus mencoba meski merasa stres atau gagal. Kini saya mengurangi
+              waktu bermain untuk fokus mengejar impian menjadi web developer,
+              karena saya yakin ketekunan dan fokus adalah kunci keberhasilan. 
+            </p>
+
+            <p>
+              Pendidikan dasar saya di SD tidak mudah: saya sempat diremehkan
+              dan bahkan diperlakukan tidak adil oleh seorang guru hanya karena
+              fisik dan kemampuan saya. Beruntung ada guru lain yang peduli,
+              membimbing saya, dan membuka mata saya akan potensi di pelajaran
+              Matematika. Berkat dukungannya, saya berhasil menjadi salah satu
+              dari lima siswa yang lolos ke sekolah negeri impian—dengan nilai
+              Matematika termasuk yang tertinggi—dan kini saya bertekad, jika
+              kelak sukses, memberikan penghargaan istimewa sebagai ungkapan
+              terima kasih kepada beliau.
+            </p>
+            <!-- Ringkasan narasi pribadi -->
+          </article>
+
+          <!-- Organisasi Section -->
+          <article id="organisasi-mario" class="card">
+            <h2>Organisasi</h2>
+            <p>
+              Selama masa perkuliahan, saya aktif mengikuti beberapa
+              organisasi...
+            </p>
+
+            <!-- Taekwondo Section -->
+            <section class="organisasi">
+              <img
+                src="img/teakwondo.jpg"
+                alt="Taekwondo"
+                class="featured-organisasi"
+              />
+              <div class="organisasi-text">
+                <h3>Taekwondo Universitas Esa Unggul</h3>
+                <ul>
+                  <li>Ketua UKM, mengelola dan memimpin kegiatan internal</li>
+                  <li>Membuat laporan absensi terorganisir</li>
+                  <li>Mengajukan proposal barang & lomba</li>
+                </ul>
+              </div>
+            </section>
+
+            <!-- Karate Section -->
+            <section class="organisasi">
+              <img
+                src="img/karate.jpg"
+                alt="Karate"
+                class="featured-organisasi"
+              />
+              <div class="organisasi-text">
+                <h3>Karate SMA Yadika 1</h3>
+                <ul>
+                  <li>Juara 3 Esa Unggul Cup antar provinsi</li>
+                  <li>Juara 1 Karate Yadika Cup</li>
+                  <li>Juara 1 SMA 33 CPU</li>
+                  <li>Asisten pelatih & instruktur pemanasan</li>
+                </ul>
+              </div>
+            </section>
+          </article>
+
+          <!-- /profil mario -->
+          <div class="profil-wrapper" id="about">
+            <aside>
+              <main class="informasi">
+                <article class="profile-card">
+                  <header>
+                    <h2 class="nama">Mario</h2>
+                    <figure>
+                      <img src="img/mario.png" alt="Foto Profil" />
+                    </figure>
+                  </header>
+
+                  <section>
+                    <h3>Informasi Lainnya</h3>
+                    <table>
+                      <tr>
+                        <th>Nama</th>
+                        <td>Mario</td>
+                      </tr>
+                      <tr>
+                        <th>Tgl Lahir</th>
+                        <td>10 Maret 2001</td>
+                      </tr>
+                      <tr>
+                        <th>Agama</th>
+                        <td>Kristen</td>
+                      </tr>
+                      <tr>
+                        <th>Kewargaan</th>
+                        <td>Indonesia</td>
+                      </tr>
+                      <tr>
+                        <th>No Wa</th>
+                        <td>+62 89635606430</td>
+                      </tr>
+                    </table>
+                  </section>
+                </article>
+              </main>
+            </aside>
+            <section>
+              <main class="sosial">
+                <a href="instagram"
+                  ><i class="fa-brands fa-instagram"></i>Instagram</a
+                >
+                <a href=""><i class="fa-brands fa-tiktok"></i>Tik Tok</a>
+                <a href="https://www.youtube.com/@Unrailo"
+                  ><i class="fa-brands fa-youtube"></i>YouTube</a
+                >
+                <a href="https://www.linkedin.com/in/mario-senawati-b786751b2/"
+                  ><i class="fa-brands fa-linkedin-in"></i>LinkedIn</a
+                >
+                <a href="https://github.com/marrriiooo"
+                  ><i class="fa-brands fa-github"></i>GitHub</a
+                >
+              </main>
+            </section>
+          </div>
+        </div>
+
+        <!-- galeri -->
+
+        <div class="galeri" id="galeri">
+          <h1>galeri</h1>
+          <div class="gambarMario">
+            <div class="gambar-holder">
+              <div id="slider-img-1"></div>
+              <div id="slider-img-2"></div>
+              <div id="slider-img-3"></div>
+              <div id="slider-img-4"></div>
+            </div>
+          </div>
+          <div class="button-holder">
+            <a href="#slider-img-1" class="buttonG"></a>
+            <a href="#slider-img-2" class="buttonG"></a>
+            <a href="#slider-img-3" class="buttonG"></a>
+            <a href="#slider-img-4" class="buttonG"></a>
+          </div>
+        </div>
+      </main>
+
+      <!-- Footer -->
+      <footer>
+        <p>Di buat oleh ❤️ by <a href="">Mario</a></p>
+      </footer>
+    </div>
+
+    <!-- JavaScript File -->
     <script src="script.js"></script>
   </body>
 </html>

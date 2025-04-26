@@ -9,5 +9,3 @@ const nav = document.querySelector("nav ul");
 menuToggle.addEventListener("click", function () {
   nav.classList.toggle("slide");
 });
-
-// ketika klik di luar beground humberger keluar
